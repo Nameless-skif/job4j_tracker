@@ -7,6 +7,8 @@ public class Broken {
 
     private static final String NEW_VALUE = "";
 
+    public Broken() { }
+
     public void echo() { }
 
     public void media(Object obj) {
@@ -16,7 +18,5 @@ public class Broken {
     }
 
     public void method(int a, int b, int c, int d, int e, int f) { }
-
-    public Broken() { }
 
 }
