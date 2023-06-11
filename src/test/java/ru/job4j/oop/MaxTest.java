@@ -32,7 +32,7 @@ class MaxTest {
         assertThat(result).isEqualTo(expected);
     }
 
-//    @Test
+    @Test
     public void whenMax30To255To7Then255() {
         int a = 30;
         int b = 255;
