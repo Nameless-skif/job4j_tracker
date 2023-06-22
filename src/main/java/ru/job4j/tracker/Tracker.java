@@ -48,7 +48,7 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        if (index != -1) {
+        if (index != -1) {  //Не очень понял задание. Уже сделана же была проверка в replace и delete.
             item.setId(id);
             items[index] = item;
         }
