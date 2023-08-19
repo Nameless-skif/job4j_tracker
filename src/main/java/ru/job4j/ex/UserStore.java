@@ -4,16 +4,17 @@ import java.util.Objects;
 
 public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
-        User num = null;
-            for (User i : users) {
-                if (Objects.equals(i.getUsername(), login)) {
-                    System.out.println("User found");
-                    num = i;
-                    break;
-                }
-                throw new UserNotFoundException("not found");
+        User result = null;
+        for (User user : users) {
+            if (Objects.equals(user.getUsername(), login)) {
+                result = user;
+                break;
             }
-        return num;
+        }
+        if (result == null) {
+            throw new UserNotFoundException("not found");
+        }
+        return result;
     }
 
     public static boolean validate(User users) throws UserInvalidException {
@@ -26,7 +27,7 @@ public class UserStore {
     public static void main(String[] args) {
         User[] users =
                 {
-                        new User("Petr Arsentev1", true)
+                        new User("Petr Arsentev", true)
                 };
         try {
             User user = findUser(users, "Petr Arsentev");
