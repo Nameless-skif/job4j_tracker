@@ -40,6 +40,5 @@ public class UserStore {
             System.out.println("User is not found");
         }
     }
-
 }
 
