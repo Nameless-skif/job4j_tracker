@@ -18,20 +18,12 @@ public class UserStore {
     }
 
     public static boolean validate(User users) throws UserInvalidException {
-        if (!Objects.equals(users.isValid(), true) || users.getUsername().length() < 3) {
-            throw new UserInvalidException("User is not valid");
-        }
-        return true;
-    }
-
-/*
-    public static boolean validate(User users) throws UserInvalidException {
         if (!users.isValid() || users.getUsername().length() < 3) {
             throw new UserInvalidException("User is not valid");
         }
         return true;
     }
-*/
+
     public static void main(String[] args) {
         User[] users =
                 {
