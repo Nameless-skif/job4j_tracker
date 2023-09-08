@@ -18,17 +18,10 @@ public class ValidateInput implements Input {
     public int askInt(String question) {
         boolean invalid = true;
         int value = -1;
-        char[] check = question.toCharArray();
         do {
             try {
                 value = in.askInt(question);
                 invalid = false;
-                for (char num : check) {
-                    if (num > 48 || num < 57) {
-                        break;
-                    }
-                }
-
             } catch (NumberFormatException nfe) {
                 out.println("Please enter valid data");
             }
